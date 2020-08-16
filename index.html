@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta http-equiv="X-UA-Compatible" contant="ie-edge">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript"src="js/bootstrap.js"></script>
+<script type="text/javascript"src="js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>	
+</head>
+<body>
+
+	
+
+<div div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3" id="cscalc">
+<form id="cscalc_form" role="form" action="/">
+<section class="cscalc_section section_header">
+	<!-------Number--->
+
+<div class="text-xs-center bottom-xs-20">
+<div><label for=""></label></div>
+<div>
+<select name="numberofchildren" id="numberofchildren">
+<option>Choose number of children</option>
+<option value="1">1 child</option>
+<option value="2">2 children</option>
+<option value="3">3 children</option>
+<option value="4">4 children</option>
+<option value="5">5 children</option>
+<option value="6">6 children</option>
+</select>
+</div>
+</div>
+</section>
+<hr>
+<section class="cscalc_section section_form">
+<div class="row gutter-30 bottom-xs-30">
+
+<!--Father-->
+
+
+<div class="col col-xs-6 parent-col father-col">
+<h4 class="cscalc_title text-xs-center">Father</h4>
+<div class="form-group">
+<input type="text" class="toNumber" name="nonMajorityParentIncome" id="nonMajorityParentIncome" value="" placeholder="">
+<span class="highlight"></span>
+<label for="nonMajorityParentIncome">Net Income after Tax <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the parent's net income after all taxes."></a></label>
+
+</div>
+<div class="form-group">
+<input type="text" class="toNumber" name="nonMajorityOvernights" id="nonMajorityOvernights" value="" placeholder="">	
+<span class="highlight"></span>
+<label for="nonMajorityOvernights">Number of Overnights <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the number overnights this parent spends with children."></a></label>
+</div>
+
+
+<div class="form-group">
+<input type="text" class="toNumber" name="monthlyDayCareCostNM" id="monthlyDayCareCostNM" value="" placeholder="">
+
+<label for="non">Day Care Cost <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the amount of day care paid by this parent."></a></label>
+</div>
+
+<div class="form-group">
+<input type="text" class="toNumber" name="monthlyMedicalInsuranceNM" id="monthlyMedicalInsuranceNM" value="" placeholder="">	
+<span class="highlight"></span>
+<label for="non">Medical Insurance <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the amount of medical insurance paid by this parent."></a></label>
+</div>
+</div>
+<!--Mother-->
+<div class="col-xs-8 col-xs-offset-2 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+<h4 class="cscalc_title text-xs-center">Mother</h4>
+<div class="form-group">
+<input type="text" class="toNumber" name="majorityParentIncome" id="majorityParentIncome" value="" placeholder="">
+<span class="highlight"></span>
+<label for="non">Net Income after Tax <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the parent's net income after all taxes."></a></label>
+</div>
+
+<div class="form-group">
+<input type="text" class="toNumber" name="majorityOvernights" id="majorityOvernights" value="" placeholder="">
+<span class="highlight"></span>
+<label for="non">Number of Overnights <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the number overnights this parent spends with children."></a></label>
+</div>
+<div class="form-group">
+<input type="text" class="toNumber" name="monthlyDayCareCostM" id="monthlyDayCareCostM" value="" placeholder="">
+<span class="highlight"></span>	
+<label for="non">Day Care Cost <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the amount of day care paid by this parent."></a></label>
+</div>
+<div class="form-group">
+<input type="text" class="toNumber" name="monthlyMedicalInsuranceM" id="monthlyMedicalInsuranceM" value="" placeholder="">
+<span class="highlight"></span>
+<label for="non">Medical Insurance <a href="#" class="helpmark" data-placement="top" data-toggle="tooltip" title="Enter the amount of medical insurance paid by this parent."></a></label>
+</div>
+</div>
+</div>
+</section>
+<section class="cscalc_section section_results">
+<div class="row gutter-10 center-xs bottom-xs-30">
+<button class="col col-xs-auto button alt small btn-calculate" id="btn-calculate" onclick="doCalculations();"><i class="fa fa-calculator" aria-hidden="true"></i>&nbsp;&nbsp;Calculate</button>
+<button class="col col-xs-auto button alt small btn-clear" id="btn-clear" onclick="clearButtons(event)">Reset</button>
+</div>
+<div class="text-xs-center">
+<p id="cscalc_result" style="display: none;"><span id="resultInput"></span></p>
+</div>
+</section>
+</form>
+
+<script type="text/javascript" src="js/main.js"></script>
+
+
+</body>
+</html>
